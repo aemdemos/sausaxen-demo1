@@ -1,33 +1,108 @@
-.columns > div {
+
+/* Apply common styles to the columns block */
+.columns {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+  margin: 20px;
+  font-family: var(--body-font-family);
 }
 
-.columns img {
+/* Style for the first column */
+.columns .column-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.columns .column-1 .content {
+  flex: 1;
+}
+
+.columns .column-1 .image {
+  flex: 1;
+}
+
+.columns .column-1 h3 {
+  font-size: var(--heading-font-size-s);
+  margin-bottom: 5px;
+}
+
+.columns .column-1 h2 {
+  font-size: var(--heading-font-size-l);
+  color: #d0451b;
+  margin-bottom: 15px;
+}
+
+.columns .column-1 p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.columns .column-1 a {
+  display: inline-block;
+  background-color: #d0451b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.columns .column-1 .image img {
   width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.columns > div > div {
-  order: 1;
+/* Style for the second column */
+.columns .column-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.columns .column-2 .content {
+  flex: 1;
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
+.columns .column-2 .image {
+  flex: 1;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
+.columns .column-2 h3 {
+  font-size: var(--heading-font-size-s);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+.columns .column-2 h2 {
+  font-size: var(--heading-font-size-l);
+  color: #d0451b;
+  margin-bottom: 15px;
+}
+
+.columns .column-2 p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.columns .column-2 a {
+  display: inline-block;
+  background-color: #d0451b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.columns .column-2 .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }

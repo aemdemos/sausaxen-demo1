@@ -1,27 +1,66 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.cards .card-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards .card-image {
+  height: 200px;
+  overflow: hidden;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards > ul > li img {
+.cards .card-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+}
+
+.cards .card-text {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cards .card-title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.cards .card-description {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+}
+
+.cards .card-link {
+  margin-top: auto;
+}
+
+.cards .card-link-anchor {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.cards .card-link-anchor:hover {
+  background-color: #c0392b;
 }
